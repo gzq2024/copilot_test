@@ -1,0 +1,6 @@
+# ignore virtual environments and data files
+safehat/
+*.pt
+results_*/
+runs/
+
