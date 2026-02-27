@@ -1,1 +1,1 @@
-# copilot_test
+The issue description file was added as template. Please open a new issue manually using the text above.
