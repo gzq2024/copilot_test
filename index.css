@@ -1,0 +1,121 @@
+/* 基本样式 */
+:root{
+  --bg1: #0f172a;
+  --bg2: #0b3d91;
+  --card: rgba(255,255,255,0.06);
+  --accent: #ffd166;
+  --text: #e6eef8;
+  --muted: #9fb0d6;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+}
+
+/* 页面容器 / 标题 */
+/* 左カラム（ヘッダー・時間・画像） */
+.left-column{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 420px;
+  width: 100%;
+  padding: 1rem;
+}
+
+h1{
+  font-size:1.25rem;
+  color:var(--accent);
+  letter-spacing:0.5px;
+}
+
+/* 位置説明 */
+.locinfo{
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+/* 时间卡片 */
+.timecard{
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), var(--card));
+  border-radius:12px;
+  padding:1.5rem 2rem;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  width:100%;
+  min-width:320px;
+  backdrop-filter: blur(6px);
+}
+
+/* 时间文字 */
+.timeshow{
+  font-family: "SFMono-Regular", Menlo, Monaco, monospace;
+  font-size:2rem;
+  color:var(--text);
+  letter-spacing:0.6px;
+}
+
+/* 响应式 */
+@media (max-width:420px){
+  .timeshow{font-size:1.4rem}
+  .timecard{padding:1rem;min-width:260px}
+}
+
+.city-selector {
+  margin: 0.8rem 0;
+}
+
+.image-container {
+  margin-top: 0.6rem;
+  width:100%;
+}
+
+#random-image {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+.image-label{
+  color:var(--muted);
+  margin-bottom:0.4rem;
+  font-size:0.95rem;
+}
+
+/* Quote card */
+.quote-card{
+  margin-top:0.8rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.03));
+  border-radius:10px;
+  padding:0.8rem 1rem;
+  width:100%;
+  box-shadow: 0 6px 20px rgba(2,6,23,0.45);
+}
+
+#quote-text{
+  font-style: italic;
+  color:var(--text);
+  font-size:1rem;
+  line-height:1.4;
+}
+
+#quote-author{
+  margin-top:0.5rem;
+  color:var(--muted);
+  font-size:0.9rem;
+  text-align:right;
+}

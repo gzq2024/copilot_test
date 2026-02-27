@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>世界时间</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <div class="left-column">
+      <h1>世界时间：</h1>
+
+      <div class="locinfo">北京时间：</div>
+
+      <div class="city-selector">
+        <label for="city">City:</label>
+        <select id="city" name="city">
+          <option value="newyork">New York</option>
+          <option value="shanghai">Shanghai</option>
+          <option value="tokyo">Tokyo</option>
+          <option value="paris">Paris</option>
+          <option value="sydney">Sydney</option>
+        </select>
+      </div>
+
+      <div class="timecard">
+        <span class="timeshow" id="timeshow">2025-10-23 12:00:00</span>
+      </div>
+
+      <div class="image-container">
+        <div class="image-label">毎日画像：</div>
+        <img id="random-image" src="" alt="Random Image">
+      </div>
+
+      <div class="quote-card" aria-live="polite">
+        <div id="quote-text">名言を読み込んでいます…</div>
+        <div id="quote-author"></div>
+      </div>
+    </div>
+
+    <!-- axios library loaded locally to avoid tracking-prevention issues -->
+    <script src="axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
